@@ -1,0 +1,43 @@
+.cs{
+    display: flex;
+    box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
+.image_season{
+    border-radius: 10px;
+}
+.rightcs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 10px;
+}
+.name_season{
+    font-weight: 700;
+}
+.infocs{
+    display: flex;
+}
+.leftifc{
+    border-right: 1px solid black;
+    padding-right: 3px;
+    font-weight: 600;
+}
+.rightifc{
+    border-left: 1px solid black;
+    padding-left: 3px;
+    font-weight: 600;
+}
+.wholese{
+    margin-top: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+.wholese:hover{
+    color: gray;
+}
+.current_season{
+    margin-bottom: 10px;
+}

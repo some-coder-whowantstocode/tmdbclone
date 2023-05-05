@@ -1,0 +1,68 @@
+.member_wholecrew{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+.allcrew{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    /* margin-left: 20%; */
+    width: 40vw;
+
+}
+.castmem_wholecrew{
+    height: 70px;
+    width: 60px;
+    border-radius: 10px;
+}
+.memb_box_wholecrew{
+    display: flex;
+    margin: 10px;
+}
+.name_detail{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    margin-left: 30px;
+  
+    /* justify-content: space-around; */
+}
+.original_name_wholecrew:hover{
+    color: gray;
+}
+.original_name_wholecrew{
+    font-weight: 800;
+    color: black;
+    text-decoration: none;
+}
+.headline_wholecrew{
+    height: 100px;
+    border-radius: 10%;
+    margin-left:70px;
+}
+.head_wholecrew{
+    background-image: linear-gradient(to right, rgb(24 36 54 / 71%) calc((50vw - 170px) - 340px), rgb(10 20 32 / 84%) 50%, rgb(10 17 32 / 84%) 100%);
+    width: 100vw;
+    display: flex;
+}
+.title_wholecrew{
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.h_wright{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-items: center;
+    margin-left:30px ;
+}
+.back_wc{
+    text-decoration: none;
+    color: white;
+}
+.back_wc:hover{
+    color: rgb(213, 209, 209);
+}

@@ -1,0 +1,36 @@
+.sborder{
+    /* padding-left: 3rem; */
+    border-bottom: 1px solid black;
+}
+.border{
+    margin-bottom: 3rem;
+}
+.res{
+    margin: 10px;
+}
+.resbox{
+    display: flex;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: -1px 0px 6px 0px rgba(0,0,0,0.75);
+    width: 68vw;
+}
+.image{
+    height: 130px;
+    border-radius: 10px;
+}
+.serresult{
+    display: flex;
+    flex-direction: column;
+}
+.sd{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.chars{
+    /* width: 80ch; */
+    height: 3lh;
+    overflow: hidden;
+
+}

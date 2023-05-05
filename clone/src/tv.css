@@ -1,0 +1,16 @@
+.header_tv{
+    height: 80vh;
+    width: 100vw;
+}
+.headbox_tv{
+    background-image: linear-gradient(to right, rgb(24 36 54 / 71%) calc((50vw - 170px) - 340px), rgb(10 20 32 / 84%) 50%, rgb(10 17 32 / 84%) 100%);
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    background-size:  cover;
+    color: white;
+}
+.season{
+    margin-left: 50px;
+    width: 70vw;
+}

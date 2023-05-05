@@ -1,0 +1,88 @@
+.review{
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+.r{
+    display: flex;
+    align-items: center;
+    /* margin-left: 60px; */
+    margin-bottom: 10px
+    ;
+}
+.heading{
+    font-weight: 900;
+    font-size: 1.7rem!important;
+}
+.r h3{
+    margin: 0 10px;
+    font-size: 1.3rem;
+}
+.revres{
+    display: flex;
+    align-items: center;
+}
+.revre{
+    display: flex;
+    align-items: center;
+    color: gray;
+ 
+}
+.author{
+    font-size: 1.3rem;
+    font-weight: 900;
+   
+}
+.revbox{
+    width: 70vw;
+    
+    padding: 10px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+    border-radius:10px;
+    height: fit-content;
+}
+.reviwer{
+    height: 60px;
+    border-radius: 50%;
+    margin: 0px 20px;
+    margin-left: 0;
+}
+.headrev_review{
+    display:flex;
+}
+.date_review{
+    font-size: 1rem;
+    color: gray;
+}
+.top_review{
+    margin: 20px 0px;
+    display: flex;
+   
+}
+.rating_review{
+    font-size: 0.8rem;
+    color: white;
+   background-color: black;
+    height: fit-content;
+    width: fit-content;
+    padding: 3px 10px;
+    border-radius: 20%;
+}
+.active_review{
+    border-bottom: 4px solid black;
+}
+.full_review{
+    color: black;
+}
+.full_review:hover{
+    color: gray;
+}
+.wholereview_reviews{
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.wholereview_reviews:hover{
+    color: gray;
+}

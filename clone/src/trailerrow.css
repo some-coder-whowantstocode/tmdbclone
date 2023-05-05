@@ -1,0 +1,104 @@
+.trailrowbox{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    
+    /* margin-bottom: 30px; */
+}
+.trailbox{
+    width: 85vw;
+    box-shadow: 0px 0px 10px 0px rgba(160, 157, 157, 0.75) inset;
+}
+.shadowbox{
+  
+    background-color: rgba(3, 37, 65, 0.4);
+    display: flex;
+    width: inherit;
+    overflow: scroll;
+}
+.trailerrow{
+    display: flex;
+    overflow: scroll;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    transition: ease-in-out 1s;
+    /* height: fit-content; */
+}
+.titl_tr{
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    /* color: white; */
+}
+.trailer_r{
+    /* height: 200px; */
+    color: #ffffff;
+    min-width:  330px ;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 20px;
+    border-radius: 20px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.trailer_r:hover{
+    transform: scale(1.1);
+    transition: ease 0.1s;
+}
+.trailer_r:hover .pb{
+    font-size: 4rem;
+    transition: ease 0.1s;
+}
+.invis{
+    opacity: 0;
+}
+.trailer_rbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    line-height: 2;
+    margin-bottom: 60px;
+}
+.trailer_rbox p{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.videoscren{
+    /* position:absolute;
+    left: 10%; */
+    /* top: 10%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    width: 70vw;
+    height: 70vh;
+    background-color: rgba(11, 11, 11, 0.411);
+}
+.invisibl_trailer{
+    top: -10000px;
+    position: absolute;
+}
+.visibl_trailer{
+    /* position: relative; */
+    z-index: 10000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(11, 11, 11, 0.411);
+
+}
+.pb{
+    font-size: 3rem;
+}

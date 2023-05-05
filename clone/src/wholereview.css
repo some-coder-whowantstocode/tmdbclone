@@ -1,0 +1,17 @@
+.wholereview{
+    width: 70vw;
+}
+.wholerevbox{
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    display: flex;
+    padding: 30px;
+    margin: 20px 20px;
+}
+.right_wr{
+    display: flex;
+    flex-direction: column;
+}
+.top_wr{
+    display: flex;
+}

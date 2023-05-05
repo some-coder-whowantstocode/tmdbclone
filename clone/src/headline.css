@@ -1,0 +1,4 @@
+.colflex{
+    display: flex;
+    flex-direction: column;
+}

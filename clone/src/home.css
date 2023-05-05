@@ -1,0 +1,10 @@
+.body{
+    
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.z{
+    position: static;
+    z-index: -1;
+}

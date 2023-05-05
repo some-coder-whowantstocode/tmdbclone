@@ -1,0 +1,34 @@
+.playbtn{
+    cursor: pointer;
+    margin: 0 5rem;
+}
+.videoscreen{
+   
+
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(11, 11, 11, 0.411);
+}
+.invisible_trailer{
+    top: -10000px;
+    position: absolute;
+}
+.visible_trailer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:100%;
+    width: 100vw;
+}
+.cross{
+    font-size: 2rem;
+    top: 0;
+    right: 0px;
+    cursor: pointer;
+    position: absolute;
+}

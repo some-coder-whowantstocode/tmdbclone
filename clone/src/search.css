@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+.searchspace{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchbox{
+    width: 85vw;
+    /* background-image: linear-gradient(to right, rgba(21, 89, 192, 0.71) calc((50vw - 170px) - 340px), rgba(5, 62, 133, 0.84) 50%, rgba(8, 38, 104, 0.84) 100%); */
+    background-image:linear-gradient(to right, rgb(8, 47, 105) calc((50vw - 170px) - 340px), rgb(7, 25, 48) 50%, rgb(8, 38, 104) 100%);
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* margin-bottom: 2.8rem; */
+    padding-bottom: 50px;
+}
+.des{
+    color: white;
+    width: fill;
+    padding: 3rem;
+   
+}
+.des h2{
+    font-size: 3rem;
+    font-weight: 100;
+    font-family: 'Tilt Warp', cursive;
+}
+.des p{
+    font-size: 1.2rem;
+    font-family: 'Tilt Warp', cursive;
+}
+.searchbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+}
+.search{
+    width: 80vw;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 10px;
+    font-size: 1.1rem;
+}
+.search:focus{
+    border: none;
+    outline: none;
+}
+.searchbtn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: fill;
+    width: 80px;
+    background: linear-gradient(87deg, rgba(11,255,127,1) 0%, rgba(0,213,255,1) 100%);
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}

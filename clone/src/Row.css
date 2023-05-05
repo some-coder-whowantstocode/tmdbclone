@@ -1,0 +1,54 @@
+.rowcontainer{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    
+}
+.titlecontainer{
+    width: 85vw;
+}
+.rowtitle{
+    text-decoration: none;
+    color: black;
+    padding:0.3rem 1.5rem;
+    font-weight: lighter;
+    font-family: 'Tilt Warp', cursive;
+}
+.rowbox{
+    width: 85vw;
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    line-height: none;
+
+}
+.rowimg{
+    border-radius: 10px;
+    width: 150px;
+    height: 225px;
+    margin-bottom: 1.5rem;
+}
+.rowimagecontainer{
+    margin: 0rem 0.6rem;
+    margin-bottom: 1rem;
+    position: relative;
+   
+}
+.progressbar{
+    position: absolute; 
+    top: 199px;
+    left: 7px;
+}
+.name{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin: none;
+}
+.date{
+    color: gray;
+    font-weight: 200;
+   
+}
