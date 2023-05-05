@@ -97,7 +97,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(11, 11, 11, 0.411);
-
+    overflow: visible;
 }
 .pb{
     font-size: 3rem;

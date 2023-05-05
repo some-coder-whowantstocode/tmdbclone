@@ -9,6 +9,7 @@ import Profile from './Profile';
 import Trailer from './Trailer';
 import Wholeseason from './Wholeseason';
 import {Routes,Route } from 'react-router-dom';
+import './responsive.css'
 
 function App() {
   return (

@@ -1,0 +1,17 @@
+@media (width<=500px) {
+    .searchbox{
+        width: 100vw;
+    }
+    .trailbox{
+        width: 100vw;
+    }
+    .titlecontainer{
+        width: 100vw;
+    }
+    .rowbox{
+        width: 100vw;
+    }
+    .list{
+        display: none;
+    }
+}
