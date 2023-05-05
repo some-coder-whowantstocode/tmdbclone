@@ -53,7 +53,7 @@
         flex-direction: column;
     }
     .review{
-        text-overflow:ellipsis;
+        word-break: break-all;
     }
     .image_season {
         height: 150px;
@@ -76,7 +76,8 @@
     }
     .lpa{
         display: flex;
-        height: 50vh;
+        height: 70vh;
+        /* max-height: 10vh; */
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -87,7 +88,7 @@
         width: 98vw;
         padding-left: 10px;
     }
-    .knowlist{
+    .knownlist{
         width: 98vw;
     }
     .box_carrer{
@@ -97,9 +98,32 @@
     .des{
         padding-left: 10px;
     }
+    .birthplace,.knownfor,.birthday{
+        max-width: 30vw;
+        
+    }
+    .also{
+        max-width: 40vw;
+    }
+    .member_wholecrew{
+        flex-direction: column;
+    }
+    .allcrew{
+        width: 100vw;
+    }
+    .title_wholecrew{
+        font-size: 1.5rem;
+    }
+    .wholerevbox {
+      
+        flex-direction: column;
+    }
 }
 @media (width<=800px) {
     .resbox{
         width: 95vw;
+    }
+    .wholereview{
+        width: 100vw;
     }
 }

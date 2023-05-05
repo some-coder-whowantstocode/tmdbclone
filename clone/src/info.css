@@ -27,6 +27,7 @@
 }
 .detaill{
     display: flex;
+    flex-wrap: wrap;
 }
 .geners{
     display: flex;

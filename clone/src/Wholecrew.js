@@ -42,7 +42,7 @@ const Wholecrew = () => {
         
      
       <div className="allcrew">
-        <h2>{movie.credits&&  "Cast" + movie.credits.cast.length}</h2>
+        <h2> Cast <div className="acn">{movie.credits&& movie.credits.cast.length}</div></h2>
         {
             
             movie.credits && movie.credits.cast.map((memb)=>(
@@ -61,7 +61,7 @@ const Wholecrew = () => {
       </div>
 
       <div className="allcast">
-      <h2>{movie.credits&&  "Crew" + movie.credits.crew.length}</h2>
+      <h2>Crew <div className="acn">{movie.credits&& movie.credits.crew.length}</div></h2>
         {
             
             movie.credits && movie.credits.crew.map((memb)=>(
