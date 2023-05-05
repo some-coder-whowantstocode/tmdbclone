@@ -90,6 +90,9 @@ useEffect(()=>{
       <div className="profile">
         <div className="left_profile">
             <img className='act' src={data != undefined && data.profile_path ? "https://image.tmdb.org/t/p/original"+data.profile_path : imag} alt="" />
+            <div className="lpa">
+
+            
             <h5>Personal info</h5>
             <div className="knownfor">
               <h6>Known for</h6>
@@ -113,6 +116,7 @@ useEffect(()=>{
                   </div>
                 ))
               }
+            </div>
             </div>
         </div>
         <div className="right_profile">

@@ -2,6 +2,9 @@
     .searchbox{
         width: 100vw;
     }
+    .navcontainer{
+        padding: 0 1rem;
+    }
     .trailbox{
         width: 100vw;
     }
@@ -13,5 +16,90 @@
     }
     .list{
         display: none;
+    }
+    .des{
+        padding: 0;
+    }
+    .search{
+        width: 98vw;
+    }
+    .infimg {
+        height: 250px;
+    }
+    .inflight{
+        flex-direction: column;
+    }
+    .credits{
+        padding: 0px;
+        margin-top: 10px;
+    }
+    .inFo{
+        flex-direction: column;
+    }
+    .cast{
+        width: 100vw;
+    }
+    .infohr{
+        width: 100vw;
+        margin: 0;
+    }
+    .review{
+        margin-left: 6px;
+    }
+    .revbox{
+        width: 96vw;
+    }
+    .headrev_review{
+        flex-direction: column;
+    }
+    .review{
+        text-overflow:ellipsis;
+    }
+    .image_season {
+        height: 150px;
+    }
+    .season{
+        width: 100vw;
+        margin: 0;
+    }
+    .act{
+        height: 162px;
+    }
+    .profile{
+        flex-direction: column;
+    }
+    .left_profile{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+    .lpa{
+        display: flex;
+        height: 50vh;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100vw;
+        padding-left: 10px;
+    }
+    .right_profile{
+        width: 98vw;
+        padding-left: 10px;
+    }
+    .knowlist{
+        width: 98vw;
+    }
+    .box_carrer{
+        width: 90vw;
+        margin-left: 10px;
+    }
+    .des{
+        padding-left: 10px;
+    }
+}
+@media (width<=800px) {
+    .resbox{
+        width: 95vw;
     }
 }
