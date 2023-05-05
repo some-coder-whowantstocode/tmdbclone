@@ -5,8 +5,8 @@ This website is made by using tmdb API.
 This website shows information of any movie,tv series and actor/actress by using tmdb API.I created this website with help of React and bootstrap.To navigate through this website uses __React-router-dom__.It uses some more React packages like axios.
 
 ## How to install                                                                                                                         
-___step-1___ : take the code to your local space.
-___step-2___ : open terminal make sure the terminal opens with in the same directory as the code then type ***npm install*** it will install all the packages and dependencies.
+___step-1___ : take the code to your local space.  
+___step-2___ : open terminal make sure the terminal opens with in the same directory as the code then type ***npm install*** it will install all the packages and dependencies.  
 ___step-3___ : type ***npm start*** this will run the code.
 
 ## Features
