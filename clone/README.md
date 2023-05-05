@@ -1,4 +1,4 @@
-* TMDB CLONE
+*TMDB CLONE
 This website is made by using tmdb API.
 
 ** Description
