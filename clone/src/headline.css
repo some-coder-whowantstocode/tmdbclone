@@ -2,3 +2,8 @@
     display: flex;
     flex-direction: column;
 }
+.h_wleft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

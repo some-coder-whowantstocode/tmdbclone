@@ -22,6 +22,7 @@
     }
     .search{
         width: 98vw;
+        font-size: 1rem;
     }
     .infimg {
         height: 250px;
@@ -118,6 +119,7 @@
       
         flex-direction: column;
     }
+   
 }
 @media (width<=800px) {
     .resbox{
