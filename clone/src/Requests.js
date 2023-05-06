@@ -3,6 +3,7 @@
 const API_KEY="2edbada9d611ecca8a2420c593d0659b";
 
 const Requests = {
+    apikey:"2edbada9d611ecca8a2420c593d0659b",
     popularmovies:`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`,
     latestmovies:`https://api.themoviedb.org/3/movie/latest?api_key=${API_KEY}&language=en-US`,
     nowplayingmovies:`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`,

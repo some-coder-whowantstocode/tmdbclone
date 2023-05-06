@@ -1,0 +1,15 @@
+.sea{
+    width: 97vw;
+    margin: 20px 0;
+}
+.sealist{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.image_sea{
+    height: 200px;
+    border-radius: 10px;
+}

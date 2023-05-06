@@ -8,6 +8,7 @@ import Credits from "./Credits";
 import Reviews from "./Reviews";
 import Trailer from "./Trailer";
 import Facts from "./Facts";
+import Requests from './Requests';
 
 const Info = ({ rat }) => {
 
@@ -42,7 +43,7 @@ const Info = ({ rat }) => {
 
   //console.log(movid);
 
-  const movieurl = `http://api.themoviedb.org/3/movie/${movid != undefined && movid}?api_key=2edbada9d611ecca8a2420c593d0659b&append_to_response=credits,reviews,videos&include_video_language=en,pt,fr,hi`;
+  const movieurl = `http://api.themoviedb.org/3/movie/${movid != undefined && movid}?api_key=${Requests.apikey}&append_to_response=credits,reviews,videos&include_video_language=en,pt,fr,hi`;
 
 
   useEffect(() => {

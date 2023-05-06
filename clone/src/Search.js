@@ -1,7 +1,5 @@
 import React,{useState,useRef,useEffect} from 'react'
-import axios from 'axios';
 import { Link, NavLink } from 'react-router-dom';
-import Request from './Requests.js'
 import './search.css'
 
 const Search = () => {

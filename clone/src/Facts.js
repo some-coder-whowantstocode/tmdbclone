@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {React,useState,useEffect} from 'react'
 import "./fact.css"
+import Requests from './Requests';
 
 const Facts = ({fact}) => {
 
@@ -10,7 +11,7 @@ const Facts = ({fact}) => {
   useEffect(()=>{
     setuse(fact);
     const find=async()=>{
-      const url = `https://api.themoviedb.org/3/find/${fact.imdb_id}?api_key=2edbada9d611ecca8a2420c593d0659b&external_source=imdb_id` ;
+      const url = `https://api.themoviedb.org/3/find/${fact.imdb_id}?api_key=${Requests.apikey}&external_source=imdb_id` ;
       const data = await axios.get(url)
     //   console.log(data);
     }

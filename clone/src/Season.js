@@ -11,29 +11,37 @@ const Season = ({mov,movi}) => {
 
     useEffect(()=>{
         // console.log(data.seasons && data.seasons[parseInt(data.seasons.length) -1] )
-        // console.log(data)
-        setpos(data.seasons && parseInt(data.seasons.length) -1)
+        console.log(data)
+        setpos(data.seasons && data.number_of_seasons-1)
         // console.log(data.seasons[data.seasons.length -1].poster_path)
     },[data])
+
+  
+   
+
   return (
     <>
-    <h2 className="current_season">Current Season</h2>
+    {
+        data.seasons && data.seasons.length >0 ? <div>
+ <h2 className="current_season">Current Season</h2>
     <div className="cs">
         <div className="leftcs">
-        <img className='image_season' src={"https://image.tmdb.org/t/p/w185"+ (data != undefined && pos !=undefined && data.seasons[pos].poster_path)} alt="" />
+            <NavLink to="/episode" state={[data?.id ?? ' ' , pos+1]} >
+            <img  className='image_season' src={"https://image.tmdb.org/t/p/w185"+ (data != undefined && data.seasons && data.seasons[pos]&& pos !=undefined && data.seasons[pos].poster_path)} alt="" />
+            </NavLink>
         </div>
         <div className="rightcs">
             <div>
 
           
-            <h3 className='name_season'>Season {pos+1}</h3>
+            <h3 className='name_season'>{data != undefined && data.seasons && data.seasons[data.seasons.length - 1] && data.seasons[data.seasons.length -1].name}</h3>
             <div className="infocs">
                 <div className="leftifc">
-                    {(data != undefined && pos !=undefined && data.seasons[pos].air_date.substr(0,4))}
+                    {(data != undefined && data.seasons && data.seasons[pos] && pos !=undefined && data.seasons[pos].air_date.substr(0,4))}
                 </div>
                 <div className="rightifc">
                     <div className="rightifctop">
-                    {(data != undefined && pos !=undefined && data.seasons[pos].episode_count)+" "}Episodes
+                    {(data != undefined && data.seasons && data.seasons[pos] && pos !=undefined && data.seasons[pos].episode_count)+" "}Episodes
                     </div>
                     
                 </div>
@@ -51,6 +59,10 @@ const Season = ({mov,movi}) => {
     <NavLink to='/wholeseason' state={data.id} className="wholese">
         View all seasons
     </NavLink>
+        </div>
+        : <div>Currently no sesons available</div>
+    }
+   
     </>
   )
 }

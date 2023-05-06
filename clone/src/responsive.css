@@ -1,4 +1,4 @@
-@media (width<=500px) {
+@media (width<=700px) {
     .searchbox{
         width: 100vw;
     }
@@ -121,6 +121,7 @@
     }
    
 }
+
 @media (width<=800px) {
     .resbox{
         width: 95vw;
@@ -128,4 +129,5 @@
     .wholereview{
         width: 100vw;
     }
+
 }

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, Link,NavLink } from "react-router-dom";
 import './review.css';
-import profile from './profile.png'
 
 
 const Reviews = ({rev,type}) => {

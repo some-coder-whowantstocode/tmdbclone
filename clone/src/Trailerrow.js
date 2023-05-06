@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './trailerrow.css'
-import Trailer from './Trailer'
 import ReactPlayer from 'react-player'
 import Void from './void.jpg'
 

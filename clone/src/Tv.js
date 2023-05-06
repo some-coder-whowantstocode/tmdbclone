@@ -9,6 +9,7 @@ import Credits from './Credits';
 import Reviews from './Reviews';
 import Trailer from './Trailer';
 import Season from './Season';
+import Requests from './Requests';
 
 
 const Tv = ({key}) => {
@@ -16,19 +17,21 @@ const Tv = ({key}) => {
     const location = useLocation();
     const[tv,settv]=useState([]);
 
-    const tvurl = `http://api.themoviedb.org/3/tv/${data}?api_key=2edbada9d611ecca8a2420c593d0659b&append_to_response=credits,reviews,videos&include_video_language=en,pt,fr,hi,keywords  `;
+    useEffect(()=>{
+      setdata(location.state)
+      console.log(location)
+  },[location])
+
+    const tvurl = `http://api.themoviedb.org/3/tv/${tv != undefined && data}?api_key=${Requests.apikey}&append_to_response=credits,reviews,videos&include_video_language=en,pt,fr,hi,keywords  `;
 
    
-    useEffect(()=>{
-        setdata(location.state)
-        console.log(location)
-    },[location])
+   
 
     useEffect(()=>{
         // 
          const get=async()=>{
            const gd =await axios.get(tvurl);
-        //    console.log(gd);
+           console.log(gd);
            settv(gd.data);
 
 
@@ -49,7 +52,7 @@ const Tv = ({key}) => {
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundImage: `url(${
-              tv.backdrop_path
+             tv != undefined && tv.backdrop_path
               ? "https://image.tmdb.org/t/p/w1280" + tv.backdrop_path
               : tv.poster_path
           }) `
@@ -61,7 +64,7 @@ const Tv = ({key}) => {
             <img
               className="infimg"
               src={
-                tv.poster_path
+                tv != undefined && tv.poster_path
                   ? "https://image.tmdb.org/t/p/w342" + tv.poster_path
                   : tv.backdrop_path 
               }
@@ -69,16 +72,16 @@ const Tv = ({key}) => {
           </div>
 
           <div className="leftinfo">
-            <h1>{tv.name ? tv.name : tv.original_name}</h1>
+            <h1>{tv != undefined && tv.name ? tv.name : tv.original_name}</h1>
             <div className="detaill">
-            <p>{tv.release_date}</p>
+            <p>{tv != undefined && tv.release_date}</p>
             <ul>
             <li></li>
             </ul>
             
             <div className="geners">
-              {tv.genres&&tv.genres.map((genre)=>(
-                <p>{genre.name}</p>
+              {tv != undefined && tv.genres&&tv.genres.map((genre)=>(
+                <p>{tv != undefined && genre.name}</p>
               ))}
             </div>
            
@@ -87,12 +90,12 @@ const Tv = ({key}) => {
             </div>
           
             <div className="infpro">
-              <Progress display={"relative"} rating={tv.vote_average} siz={1.4} />
-              <Trailer needed={tv}/>
+              <Progress display={"relative"} rating={tv != undefined && tv.vote_average} siz={1.4} />
+              <Trailer needed={tv != undefined && tv}/>
             </div>
-            <p>{tv.tagline}</p>
+            <p>{tv != undefined && tv.tagline}</p>
             <h4>Overview</h4>
-            <p>{tv.overview}</p>
+            <p>{tv != undefined && tv.overview}</p>
           </div>
         </div>
       </div>
@@ -100,21 +103,21 @@ const Tv = ({key}) => {
 
 <div className="inFo">
 <div className="left_info">
-<Credits movi={data}  mov={tv} type={"tv"}/>
+<Credits movi={tv != undefined && data}  mov={tv != undefined && tv} type={"tv"}/>
 <hr className="infohr"/>
 
 <div className="season">
-    <Season movi={data} mov={tv}/>
+    <Season movi={tv != undefined && data} mov={tv != undefined && tv}/>
 </div>
 
 <hr className='infohr' />
-<Reviews rev={tv} type={"tv"}/>
+<Reviews rev={tv != undefined && tv} type={"tv"}/>
 
 
 </div>
 
 <div className="right_info">
-<Facts fact={tv}/>
+<Facts fact={tv != undefined && tv}/>
 </div>
 
 </div>

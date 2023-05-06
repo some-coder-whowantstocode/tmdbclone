@@ -13,32 +13,33 @@ const Navbar = () => {
 
  const[clas,setclas]=useState("visibl");
 
-  useEffect(()=>{
-
-    const updown = ()=>{
- 
-
-      
-      const nav = document.querySelector("navcontainer")
-      var currentScrollTop = window.scrollY; 
-      if (currentScrollTop > lastScrollTop&&currentScrollTop-lastScrollTop>=188) {
-        lastScrollTop = currentScrollTop;
-       setclas("invisibl");
-      }
-      if (currentScrollTop < lastScrollTop || currentScrollTop<=48) {
-        lastScrollTop = currentScrollTop;
-        setclas("visibl");
-      }
-     
-     
-    
-  }
-
-    window.addEventListener("scroll", updown );
-    return()=>{
-    window.removeEventListener("scroll",updown);
+ useEffect(() => {
+  // Define a function to toggle the visibility of the navcontainer element
+  const toggleNav = () => {
+    const nav = document.querySelector("navcontainer");
+    // Get the current scroll position
+    const currentScrollTop = window.scrollY;
+    // Compare it with the previous scroll position
+    if (currentScrollTop > lastScrollTop && currentScrollTop - lastScrollTop >= 188) {
+      // If scrolling down and the difference is greater than 188, hide the navcontainer
+      lastScrollTop = currentScrollTop;
+      setclas("invisibl");
+    } else if (currentScrollTop < lastScrollTop || currentScrollTop <= 48) {
+      // If scrolling up or at the top of the page, show the navcontainer
+      lastScrollTop = currentScrollTop;
+      setclas("visibl");
     }
-  },[window.scrollY])
+  };
+
+  // Add a scroll event listener to call the toggleNav function
+  window.addEventListener("scroll", toggleNav);
+  // Remove the event listener when the component unmounts
+  return () => {
+    window.removeEventListener("scroll", toggleNav);
+  };
+}, [window.scrollY]);
+
+
 
   
   return (

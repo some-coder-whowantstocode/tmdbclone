@@ -4,6 +4,7 @@ import { Link, NavLink,useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import './searchpage.css';
 import image from'./inf.png';
+import Requests from './Requests';
 
 const Searchpage = () => {
 
@@ -17,9 +18,9 @@ const Searchpage = () => {
     const[pn,setpn]=useState(1);
     const[newmovie,setnm]=useState();
 
-    const API_KEY="2edbada9d611ecca8a2420c593d0659b";
+    
 
-    const url= `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&query=${elem}&page=1&include_adult=false`;
+    const url= `https://api.themoviedb.org/3/search/multi?api_key=${Requests.apikey}&language=en-US&query=${elem}&page=1&include_adult=false`;
 
 
  
@@ -29,7 +30,7 @@ useEffect(()=>{
 
     try{
         const loadmore = async()=>{
-            const newurl = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&query=${elem}&page=${pn}}&include_adult=false`;
+            const newurl = `https://api.themoviedb.org/3/search/multi?api_key=${Requests.apikey}&language=en-US&query=${elem}&page=${pn}}&include_adult=false`;
             const objdata = await axios.get(newurl);
             setnm(objdata.data.data ? objdata.data.data.results : objdata.data.results)
         // newmovie && newmovie.map((res)=>(

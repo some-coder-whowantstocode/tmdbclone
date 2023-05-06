@@ -6,6 +6,7 @@ import axios from 'axios'
 import image from './profile.png'
 import imag from "./inf.png";
 import Carrer from './Carrer'
+import Requests from './Requests';
 
 const Profile = ({Key}) => {
     const location = useLocation();
@@ -19,7 +20,7 @@ const Profile = ({Key}) => {
     const[tc,settc]=useState("");
     const[tcr,settcr]=useState("");
 
-    const url =  `https://api.themoviedb.org/3/person/${pi}?api_key=2edbada9d611ecca8a2420c593d0659b&append_to_response=movie_credits,tv_credits`
+    const url =  `https://api.themoviedb.org/3/person/${pi}?api_key=${Requests.apikey}&append_to_response=movie_credits,tv_credits`
    
     useEffect(()=>{
         console.log(location.state)

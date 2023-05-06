@@ -8,6 +8,7 @@ import Searchpage from './Searchpage';
 import Profile from './Profile';
 import Trailer from './Trailer';
 import Wholeseason from './Wholeseason';
+import Episode from './Episode';
 import {Routes,Route } from 'react-router-dom';
 import './responsive.css'
 
@@ -24,6 +25,7 @@ function App() {
     <Route path='/tv' element={<Tv/>}/>
     <Route path='/wholeseason' element={<Wholeseason/>}/>
     <Route path='/trailer' element={<Trailer/>}/>
+    <Route path='/episode' element={<Episode/>}/>
    </Routes>
    </>
   );
