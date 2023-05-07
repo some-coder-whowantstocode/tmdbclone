@@ -1,0 +1,81 @@
+@media (width <=1100px) {
+    .optionbox{
+        position: unset!important;
+        width: 100vw!important;
+        height: fit-content;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        border-radius: 0px 0px 0 0 !important;
+        margin-top: 0px;
+        margin-right: 0px;
+        display: flex;
+        overflow: scroll;
+        
+    }
+    .obhead{
+        border-radius: 0!important;
+        height: 100%!important;
+    }
+    .serchresultbox{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100vw;
+        position: relative;
+    }
+}
+.optionbox{
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    width: 15vw;
+    left: 56px;
+    top: 109px;
+    /* background-color: black; */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 10px 10px 0 0;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.obhead{
+    height: fit-content;
+    color: black;
+    font-weight: 800;
+    font-size: 2rem;
+    background-color: rgb(1,180,228);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.obmovie,.obtvseries,.obperson,.oball{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    cursor: pointer;
+    /* border: 1px solid gray; */
+    /* border-top: 0; */
+    background-color: rgb(221, 217, 217);
+}
+
+.obmovie:hover{
+   background-color: rgb(183, 183, 183);
+}
+.obtvseries:hover{
+    background-color:rgb(183, 183, 183);
+}
+.obperson:hover{
+    background-color:rgb(183, 183, 183);
+}
+.oball:hover{
+    background-color: rgb(183, 183, 183);
+}
+.obs{
+    background-color: white;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}

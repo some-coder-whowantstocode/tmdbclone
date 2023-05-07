@@ -34,3 +34,30 @@
     overflow: hidden;
 
 }
+.serchresultbox{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80vw;
+    position: relative;
+}
+.searchbigbox{
+    display: flex;
+    justify-content: center;
+    
+    /* flex-direction: column; */
+}
+.gototop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgb(1,180,228);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 900;
+}
