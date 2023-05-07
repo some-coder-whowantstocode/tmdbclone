@@ -31,3 +31,7 @@ Where on the left side you will find its personal info and on the right side you
 ### Trailer 
 
 In the info page you will see __▷ play trailer__ click on it to see the official trailer.
+
+# Link 
+- ![#1589F0](https://some-coder-whowantstocode.github.io/tmdbclone/https://some-coder-whowantstocode.github.io/tmdbclone/) `#1589F0`
+copy the link and paste it in the browser and you will be able to see the website i hosted.
