@@ -21,12 +21,16 @@ const Searchpage = () => {
     const[newmovie,setnm]=useState();
     const[sm,setsm]=useState([]);
     const[st,setst]=useState([]);
-    const[sp,setsp]=useState([])
-    const[type,settype]= useState()
-    const[spl,setspl]=useState(0)
-    const[stl,setstl]=useState(0)
-    const[sml,setsml]=useState(0)
-    const[sl,setsl]=useState(0)
+    const[sp,setsp]=useState([]);
+    const[type,settype]= useState();
+    const[spl,setspl]=useState(0);
+    const[stl,setstl]=useState(0);
+    const[sml,setsml]=useState(0);
+    const[sl,setsl]=useState(0);
+    const[cn1,setcn1]=useState("ob")
+    const[cn2,setcn2]=useState("ob")
+    const[cn3,setcn3]=useState("ob")
+    const[cn4,setcn4]=useState("activeob")
 
     
 
@@ -370,7 +374,10 @@ const change =(type)=>{
     // return sho(type)
     settype(type)
     switch(type){
-        case "movie" : 
+        case "movie" : return setcn1("activeob"),setcn2("ob"),setcn3("ob"),setcn4("ob")
+        case "tv" : return  setcn1("ob"),setcn2("activeob"),setcn3("ob"),setcn4("ob")
+        case "person" : return  setcn1("ob"),setcn2("ob"),setcn3("activeob"),setcn4("ob")
+        default : return  setcn1("ob"),setcn2("ob"),setcn3("ob"),setcn4("activeob")
     }
 }
 
@@ -403,10 +410,10 @@ const gototop=()=>{
 <div className="sebright">
 <div className='optionbox'>
         <div className="obhead" >Results </div>
-      <div className="obmovie" onClick={()=>change("movie")}><span>Movie</span> <span className='obs'>{sml}</span></div>
-      <div className="obtvseries" onClick={()=>change("tv")}><span>Tv-Series</span> <span className='obs'>{stl}</span></div> 
-       <div className="obperson" onClick={()=>change("person")}><span>Person</span> <span className='obs'>{spl}</span></div>
-      <div className='oball' onClick={()=>change()}><span>All</span> <span className='obs'>{sl}</span></div>
+      <div className={cn1} onClick={()=>change("movie")}><span>Movie</span> <span className='obs'>{sml}</span></div>
+      <div className={cn2} onClick={()=>change("tv")}><span>Tv-Series</span> <span className='obs'>{stl}</span></div> 
+       <div className={cn3} onClick={()=>change("person")}><span>Person</span> <span className='obs'>{spl}</span></div>
+      <div className={cn4} onClick={()=>change()}><span>All</span> <span className='obs'>{sl}</span></div>
     </div>
 </div>
 
