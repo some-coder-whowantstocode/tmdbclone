@@ -23,25 +23,31 @@ const Profile = ({Key}) => {
     const url =  `https://api.themoviedb.org/3/person/${pi}?api_key=${Requests.apikey}&append_to_response=movie_credits,tv_credits`
    
     useEffect(()=>{
-        console.log(location.state)
+        // console.log(location.state)
         setpi(location.state)
     },[location])
 
     useEffect(()=>{
-        const find = async () => {
-            try {
-              const data = await axios.get(url);
-              console.log(data);
-              setdata(data.data);
-              setlist([]);
-              setunlist([]);
-            } catch (error) {
-              console.error(error);
-              // do something else with the error
-            }
-          };
-          find();
+      try {
+        if(!pi || pi==""){
 
+        }else{
+          const find = async () => {
+           
+            const data = await axios.get(url);
+            // console.log(data);
+            setdata(data.data);
+            setlist([]);
+            setunlist([]);
+         
+        };
+        find();
+        }
+        
+        } catch (error) {
+          console.error(error);
+          // do something else with the error
+        }
 
     },[pi])
 
@@ -54,21 +60,19 @@ useEffect(()=>{
 },[data])
    
 useEffect(()=>{
-  console.log(unlist)
+  // console.log(unlist)
   // let len =0;
   // unlist.slice(0,9)
   unlist.length >0  && unlist.map((cas)=>(
          
-    unlist.indexOf(cas)<9 ? setlist((prev)=>([...prev, cas ])) : console.log(unlist.indexOf(cas))
+    unlist.indexOf(cas)<9 && setlist((prev)=>([...prev, cas ])) 
    
 ))
 
 
 },[unlist])
 
-useEffect(()=>{
-  console.log(list)
-},[list])
+// console.log(list)
 
     const chanmovie =(given)=>{
         //  given == "movie" ? setmc("active") 
@@ -90,7 +94,7 @@ useEffect(()=>{
       <Navbar/>
       <div className="profile">
         <div className="left_profile">
-            <img className='act' src={data != undefined && data.profile_path ? "https://image.tmdb.org/t/p/original"+data.profile_path : imag} alt="" />
+            <img className='act' src={data != undefined && data.profile_path ? "https://image.tmdb.org/t/p/original"+data.profile_path : image} alt="" />
             <div className="lpa">
 
             
@@ -111,9 +115,9 @@ useEffect(()=>{
             <h6>Also known as</h6>
               {
                 data != undefined && data.also_known_as.map((chan)=>(
-                  <div>
+                  <div key={chan.id}>
                     
-                  <div>{chan}</div>
+                  <div >{chan}</div>
                   </div>
                 ))
               }
@@ -132,7 +136,7 @@ useEffect(()=>{
               {
   list.length >0  && list.map((cas)=>(
     <div className="ke" >
- <NavLink to="/info" state={cas.id} key={cas.id}>
+ <NavLink to="/info" state={cas.id} >
       <img className='actimg' src={cas.poster_path ?(cas.poster_path?"https://image.tmdb.org/t/p/w185"+cas.poster_path: imag) :(cas.backdrop_path ? "https://image.tmdb.org/t/p/w185"+cas.backdrop_path : imag)   }/>
     </NavLink>
     </div>

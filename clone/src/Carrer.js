@@ -11,7 +11,7 @@ const Carrer = ({ke,type}) => {
     },[ke])
 
     useEffect(()=>{
-        (console.log(data))
+        // (console.log(data))
     },[data])
 
     useEffect(()=>{

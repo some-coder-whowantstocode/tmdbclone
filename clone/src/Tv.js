@@ -19,26 +19,31 @@ const Tv = ({key}) => {
 
     useEffect(()=>{
       setdata(location.state)
-      console.log(location)
+      // console.log(location)
   },[location])
 
-    const tvurl = `http://api.themoviedb.org/3/tv/${tv != undefined && data}?api_key=${Requests.apikey}&append_to_response=credits,reviews,videos&include_video_language=en,pt,fr,hi,keywords  `;
 
    
    
 
     useEffect(()=>{
         // 
-         const get=async()=>{
-           const gd =await axios.get(tvurl);
-           console.log(gd);
-           settv(gd.data);
-
-
-
-           
-        } 
-        get();
+        try{
+          if(!data || data==""){
+            // console.log("no id available currently")
+          }else{
+            const get=async()=>{
+              const tvurl = `http://api.themoviedb.org/3/tv/${data}?api_key=${Requests.apikey}&append_to_response=credits,reviews,videos&include_video_language=en,pt,fr,hi,keywords  `;
+                     const gd =await axios.get(tvurl);
+                    //  console.log(gd);
+                     settv(gd.data);
+                  } 
+                  get();
+          }
+        }catch(error){
+            console.log(error.response?.gd?.error)
+        }
+       
     },[data])
 
   return (
@@ -81,7 +86,7 @@ const Tv = ({key}) => {
             
             <div className="geners">
               {tv != undefined && tv.genres&&tv.genres.map((genre)=>(
-                <p>{tv != undefined && genre.name}</p>
+                <p key={genre.id}>{tv != undefined && genre.name}</p>
               ))}
             </div>
            

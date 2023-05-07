@@ -20,15 +20,7 @@ const Info = ({ rat }) => {
   const [data, setdata] = useState([]);
   const [movid, setmovid] = useState();
   const [movie, setmovie] = useState([]);
-  const[moviedata,setmoviedata] = useState([]);
-  const[type,settype]=useState("movie")
-  const[send,setsend]=useState(false)
   
-
-  useEffect(()=>{
-    //console.log("use")
-    //console.log(moviedata)
-  },[moviedata])
 
   useEffect(() => {
     location.state != undefined && setdata(location.state);
@@ -37,42 +29,42 @@ const Info = ({ rat }) => {
 
   useEffect(() => {
     setmovid(data);
-    setsend(data)
 }
   , [data]);
 
   //console.log(movid);
 
-  const movieurl = `http://api.themoviedb.org/3/movie/${movid != undefined && movid}?api_key=${Requests.apikey}&append_to_response=credits,reviews,videos&include_video_language=en,pt,fr,hi`;
 
 
   useEffect(() => {
-    const moviedata = async () => {
+   
       try {
         // Check if movid is defined
-        if (!movid) {
-          console.log("wait a little");
+        if (!movid || movid == "") {
+          // console.log("wait a little");
         } else {
-          console.log(movid);
+          const moviedata = async () => {
+            const id = movid;
+           
+              const movieurl =  `http://api.themoviedb.org/3/movie/${id.toString()}?api_key=${Requests.apikey}&append_to_response=credits,reviews,videos&include_video_language=en,pt,fr,hi`;
           // Use destructuring to get data from axios response
-          const { data } = await axios.get(movieurl);
+          let { data } = await axios.get(movieurl);
           // Use logical AND to set movie only if data is not undefined
           data && setmovie(data);
+          
         }
+        moviedata();
+      };
+     
       } catch (error) {
         // Use optional chaining to access error property safely
         console.log(error.response?.data?.error);
+
+        throw error;
       }
-    };
-    moviedata();
+  
   }, [movid]);
 
-  // //console.log(data);
-  // console.log(movie);
-
-  useEffect(()=>{
-    // console.log(movie)
-  },[movie])
 
   return (
     <div>

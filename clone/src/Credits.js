@@ -11,7 +11,6 @@ const Credits = ({movi,mov,type}) => {
     const[list,setlist]=useState([]);
     const[tipe,settipe]=useState();
 
-
     useEffect(() => {
       
 
@@ -22,7 +21,7 @@ const Credits = ({movi,mov,type}) => {
       useEffect(()=>{
         movie.credits && movie.credits.cast.map((cas)=>(
          
-             cas.order < 9 ? setlist((prev)=>([...prev, cas ])) : console.log("done")
+             cas.order < 9 && setlist((prev)=>([...prev, cas ])) 
             
         ))
 
@@ -30,9 +29,10 @@ const Credits = ({movi,mov,type}) => {
       },[movie])
 
       useEffect(()=>{
-        ////console.log(list)
+        
         settipe(type)
       },[type])
+
   return (
     <>
       <div className="credits">
@@ -40,7 +40,7 @@ const Credits = ({movi,mov,type}) => {
 
 <div className="cast">
  
-  {list.length >1&&list.map((mem)=>(
+  {list.length >=1&&list.map((mem)=>(
     
       <div className="imgdetinfo" key={mem.id}>
         <NavLink to="/profile" state={mem.id} >
@@ -62,7 +62,7 @@ const Credits = ({movi,mov,type}) => {
     
 ))}
 {
-list !=undefined && movie.credits && movie.credits.cast.length>9 ? <div className="loadmore_container"><NavLink className="loadmore_credits"   to="/wholecrew" state={{movi,mov}}><span >view more ⇾ </span></NavLink></div> : console.log("not enough!!!")
+list !=undefined && movie.credits && movie.credits.cast.length>9 && <div className="loadmore_container"><NavLink className="loadmore_credits"   to="/wholecrew" state={{movi,mov}}><span >view more ⇾ </span></NavLink></div> 
 }
 
 

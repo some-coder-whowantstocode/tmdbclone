@@ -1,12 +1,10 @@
 import React, { useEffect,useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './navbar.css'
-// import { VscSearch } from "react-icons/vsc";
 
 const Navbar = () => {
 
   var lastScrollTop = 0;
-  // var currentScrollTop = window.scrollY;
  
 
 
@@ -45,7 +43,7 @@ const Navbar = () => {
   return (
     <div  className={`navcontainer ${clas}`}>
       <div className="rightnav">
-<NavLink className='title list_n' to="/"><li >TMDB</li></NavLink>
+<NavLink className='title list_n' to="/"><span >TMDB</span></NavLink>
 <div className="list">movies</div>
 <div className="list">TV shows</div>
 <div className="list">People</div>
@@ -54,7 +52,7 @@ const Navbar = () => {
     <label className='lab' htmlFor="see">
     {/* <VscSearch/> */}
     </label>
-    <NavLink className='list_s'  id="see" to="/searchpage"><li >search</li></NavLink>
+    <NavLink className='list_s'  id="see" to="/searchpage"><span >search</span></NavLink>
 
     
     </div>

@@ -20,19 +20,13 @@ const Row = ({url,title}) => {
         
     },[url])
 
-    
-    useEffect(()=>{
-
-      //console.log(movies)
-    },[movies])
-
 
     const mov =(result)=>{
 
 
  return  <div className='rowimagecontainer' key={result.id + "0"}>
                <NavLink className='name' state={result.id} key={result.id + "1"}  to="/info">
-   <img className='rowimg' key={result.id + "2"} src={result.poster_path ? "https://image.tmdb.org/t/p/w154"+result.poster_path : image}></img>
+   <img className='rowimg' key={result.id + "2"} src={result.poster_path ? "https://image.tmdb.org/t/p/w154"+result.poster_path : image} alt="movie"></img>
    <p className='name' key={result.id + "3"}>{result.title ? result.title : result.original_title}</p>
    </NavLink>
    <div className="progressbar" key={result.id + "4"}>
@@ -41,18 +35,15 @@ const Row = ({url,title}) => {
    <p className='date' key={result.id + " 5"}>{result.release_date ? result.release_date : result.first_air_date}</p>
                </div>
 
-  
-
     }
 
 
     const tv =(result)=>{
       return  <div className='rowimagecontainer' key={result.id + "6"}>
       <NavLink className='name' state={result.id} key={result.id + "7"}  to="/tv">
-      {/* <div  key={result.id + "7"} > */}
 
       
-    <img className='rowimg' key={result.id + "8"} src={result.poster_path ? "https://image.tmdb.org/t/p/w154"+result.poster_path : image}></img>
+    <img className='rowimg' key={result.id + "8"} src={result.poster_path ? "https://image.tmdb.org/t/p/w154"+result.poster_path : image} alt='tv series'></img>
     <p className='name' key={result.id + "9"}>{result.name ? result.name : result.original_name}</p>
     </NavLink>
     <div className="progressbar" key={result.id + "10"}>
@@ -60,7 +51,6 @@ const Row = ({url,title}) => {
     </div>
     <p className='date' key={result.id + "11"}>{result.release_date ? result.release_date : result.first_air_date}</p>
       </div>
-      // </div>
     }
 
   return (
@@ -69,8 +59,6 @@ const Row = ({url,title}) => {
     <div className="rowtitle" ><h2 className="rowtitle">{title}</h2></div>
     </div>
     
-   
-
       <div className="rowbox"  >
         
         {movies.data&&movies.data.results.map((result)=>(

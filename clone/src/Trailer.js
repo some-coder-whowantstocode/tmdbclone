@@ -27,10 +27,10 @@ const Trailer = ({needed}) => {
         const find = async () => {
             try {
               if (!needed.videos) {
-                console.log(`wait for trailer`);
+                // console.log(`wait for trailer`);
               } else {
                 const url = needed.videos?.results.find(({ name }) => name === "Official Trailer") ?? null;
-                console.log(url);
+                // console.log(url);
                 setkey(url ? url.key : needed.videos.results[needed.videos.results.length - 1].key);
               }
             } catch (error) {

@@ -12,19 +12,15 @@ const Reviews = ({rev,type}) => {
         setmovie(rev)
       }, [rev]);
 
-      useEffect(()=>{
-        // console.log(movie)
-      },[movie])
-
+   
   return (
     <>
       <div className="review">
         <div className="r">
         <h3 className="heading">social</h3>
-  <h3 className="revres active_review">reviews<h3 className="revre">{movie.reviews && movie.reviews.total_results}</h3></h3>
+  <h3 className="revres active_review">reviews<span className="revre">{movie.reviews && movie.reviews.total_results}</span></h3>
         </div>
-  
-  {/* {movie.reviews&&movie.reviews.results.map((revi)=>{ */}
+
   {movie.reviews && movie.reviews.results.length>0 ?  <div className="revbox">
       <div className="headrev_review">
         <div className="lefthead_review">

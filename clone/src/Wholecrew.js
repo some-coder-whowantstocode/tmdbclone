@@ -46,13 +46,13 @@ const Wholecrew = () => {
         {
             
             movie.credits && movie.credits.cast.map((memb)=>(
-                <div className="memb_box_wholecrew" key={memb.id +"12894759"}>
+                <div className="memb_box_wholecrew" key={memb.credit_id}>
                   <NavLink to='/profile' state={memb.id}>
-                  <img className="castmem_wholecrew" key={memb.id +"130943509"} src={memb.profile_path ? "https://image.tmdb.org/t/p/w185"+memb.profile_path : profile} alt="" />
+                  <img className="castmem_wholecrew" key={memb.credit_id} src={memb.profile_path ? "https://image.tmdb.org/t/p/w185"+memb.profile_path : profile} alt="" />
                   </NavLink>
                 <div className="name_detail">
                 <NavLink to='/profile' state={memb.id} className="original_name_wholecrew">{memb.original_name}</NavLink>
-                <div className="charname_wholecrew" key={memb.id +"145432905"}>{memb.character}</div>
+                <div className="charname_wholecrew" key={memb.credit_id}>{memb.character}</div>
                 </div>
                
                 </div>
@@ -67,7 +67,7 @@ const Wholecrew = () => {
             movie.credits && movie.credits.crew.map((memb)=>(
                 <div className="memb_box_wholecrew" key={memb.credit_id}>
                   <NavLink to="/profile" state={memb.id}>
-                  <img className="castmem_wholecrew" key={memb.credit_id } src={memb.profile_path ? "https://image.tmdb.org/t/p/w185"+memb.profile_path : profile} alt="" />
+                  <img className="castmem_wholecrew" key={memb.credit_id} src={memb.profile_path ? "https://image.tmdb.org/t/p/w185"+memb.profile_path : profile} alt="" />
                   </NavLink>
                 <div className="name_detail">
                 <NavLink to='/profile' state={memb.id} className="original_name_wholecrew">{memb.original_name}</NavLink>

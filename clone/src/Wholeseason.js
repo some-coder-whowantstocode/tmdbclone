@@ -14,27 +14,25 @@ const Wholeseason = () => {
 
     useEffect(()=>{
         settvid(location.state)
-        console.log(location.state)
+        // console.log(location.state)
     },[location])
 
-    useEffect(()=>{
-      console.log(tv)
-    },[tv])
-
-    const tvurl = `http://api.themoviedb.org/3/tv/${tvid}?api_key=${Requests.apikey}&append_to_response=credits,reviews,videos&include_video_language=en,pt,fr,hi,keywords  `;
 
    
    
 
     useEffect(()=>{
         try{
-          if(!tv){
-            console.log("not available");
+          if(!tvid || tvid==""){
+            // console.log("not available");
           }
           else{
+
             const get=async()=>{
+    const tvurl = `http://api.themoviedb.org/3/tv/${tvid}?api_key=${Requests.apikey}&append_to_response=credits,reviews,videos&include_video_language=en,pt,fr,hi,keywords  `;
+
               const gd =await axios.get(tvurl);
-              console.log(gd.data.seasons);
+              // console.log(gd.data.seasons);
               settv(gd.data) 
            } 
            get();
@@ -55,7 +53,7 @@ const Wholeseason = () => {
 
 
 {tv != undefined &&tv.seasons!=undefined &&  tv.seasons.map((sea)=>(
-  <div className="sea">
+  <div className="sea" key={sea.id}>
   <div className="cs">
   <div className="leftcs">
     <NavLink to="/episode" state={[tvid && tvid , sea.name.substr(7,1)]} >

@@ -33,20 +33,14 @@ useEffect(()=>{
             const newurl = `https://api.themoviedb.org/3/search/multi?api_key=${Requests.apikey}&language=en-US&query=${elem}&page=${pn}}&include_adult=false`;
             const objdata = await axios.get(newurl);
             setnm(objdata.data.data ? objdata.data.data.results : objdata.data.results)
-        // newmovie && newmovie.map((res)=>(
-        //         setshow((prev)=>[...prev,res])
-                
-        //     ))
-        // objdata.data.data != undefined && objdata.data.data.results.map((res)=>(
-
-        // ))
+   
         }
         loadmore();
     }
     catch(error){
         ////console.log(error);
     }
-    console.log(pn)
+    // console.log(pn)
     
     
 },[pn])
@@ -54,7 +48,7 @@ useEffect(()=>{
 
 useEffect(()=>{
     if(newmovie != undefined && newmovie[0] == show[0]){
-        console.log("stop")
+        // console.log("stop")
     }
     else {
         newmovie != undefined && newmovie && newmovie.map((res)=>(
@@ -123,7 +117,7 @@ const handleScroll =async()=>{
 //)
 
 useEffect(()=>{
-    console.log(limit)
+    // console.log(limit)
 },[limit])
 
     
@@ -160,7 +154,7 @@ useEffect(()=>{
                     setmovies( objdata.data ? objdata.data : objdata.data)
                     setnm(objdata.data.data ? objdata.data.data.results : objdata.data.results)
                     // ////console.log(show)
-                   console.log(objdata!= [] && objdata)
+                //    console.log(objdata!= [] && objdata)
                     setpn(objdata.data.page)
                 //    setpn(1)
                 setshow([])
@@ -183,7 +177,7 @@ useEffect(()=>{
 //)
 
 useEffect(()=>{
-    show != undefined && console.log(show)
+    // show != undefined && console.log(show)
 },[show])
 
     const inputelem = useRef("");
@@ -246,7 +240,7 @@ useEffect(()=>{
 
 <div className="serresult">
 {(elem&&show)&&show.map((result)=>(
-    <div id={result.id} className='resbox'>
+    <div key={result.id} className='resbox'>
 
         {
            result && result.media_type == "person" ?  <NavLink state={result.id} to="/profile">

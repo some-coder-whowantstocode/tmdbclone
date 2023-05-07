@@ -28,16 +28,24 @@ const[movie,setmovie]=useState([]);
     // console.log(data);
 
     useEffect(() => {
-      const moviedata = async () => {
-        try {
-          const movieurl = `http://api.themoviedb.org/3/movie/${id!=undefined &&id}?api_key=2edbada9d611ecca8a2420c593d0659b&append_to_response=credits,reviews,videos&include_video_language=en,pt,fr,hi,keywords`;
-          const od = await axios.get(movieurl);
-          setmovie(od.data);
-        } catch (error) {
-          console.error(error);
+      try {
+        if(!id){
+          // console.log("no id available in trailerrow")
         }
-      };
-      moviedata();
+        else{
+          const moviedata = async () => {
+       
+            const movieurl = `http://api.themoviedb.org/3/movie/${id!=undefined &&id}?api_key=2edbada9d611ecca8a2420c593d0659b&append_to_response=credits,reviews,videos&include_video_language=en,pt,fr,hi,keywords`;
+            const od = await axios.get(movieurl);
+            setmovie(od.data);
+         
+        };
+        moviedata();
+        }
+    
+    } catch (error) {
+      console.error(error);
+    }
       }, [id]);
 
 
@@ -46,23 +54,32 @@ const[movie,setmovie]=useState([]);
       },[key])
 
       useEffect(()=>{
-    
-      const find = async (movie = {}) => {
         try {
-          const { videos = {} } = movie;
-          const { results = [] } = videos;
-          const url = await results.find(({ name }) => name === "Official Trailer");
-          // console.log(url);
-          // const {key } = url ? url.key : results[results.length - 1].key;
-          setkey(url ? url.key : results[results.length - 1].key);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-      find(movie);
-     
-
-      // console.log(movie)
+          if(!movie){
+            console.log("no movie in trailerow")
+          }
+          else{
+            const find = async (movie = {}) => {
+      
+              const { videos = {} } = movie;
+              const { results = [] } = videos;
+              let url ={};
+              for(let result of results){
+                let res = await result;
+                if(res.name === "Official Trailer"){
+                  url = res;
+                  break;
+                }
+              }
+              !url ? console.log("no url in trailerrow") :
+              setkey(url ? url.key : results[results.length - 1].key);
+          };
+          find(movie);
+          }
+   
+    } catch (error) {
+      console.log(error.response?.url?.response );
+    }
     },[movie])
     
 
@@ -110,8 +127,8 @@ const settle =(id)=>{
        
     
       {data != undefined && data.results && data.results.map((res)=>(
-      <div  className='trailer_rbox' key={res.id}>
-        <div onClick={()=>settle(res.id)} className="trailer_r" onMouseEnter={()=>setimg(res.backdrop_path)} style={{
+      <div  className='trailer_rbox' key={res.id + 9450539}>
+        <div onClick={()=>settle(res.id)}  className="trailer_r" onMouseEnter={()=>setimg(res.backdrop_path)} style={{
             backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center center",
@@ -122,9 +139,9 @@ const settle =(id)=>{
           }) `
          
         }}>
-            <div className='pb'>▷</div>
+            <div className='pb'  >▷</div>
         </div>
-        <p>{res.title}</p>
+        <p key={res.id } >{res.title}</p>
         
         </div>
       ))}
