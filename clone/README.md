@@ -33,5 +33,5 @@ Where on the left side you will find its personal info and on the right side you
 In the info page you will see __▷ play trailer__ click on it to see the official trailer.
 
 # Link 
-[TMDB clone](https://some-coder-whowantstocode.github.io/tmdbclone/https://some-coder-whowantstocode.github.io/tmdbclone/) "hosted website")
+[TMDB clone](https://some-coder-whowantstocode.github.io/tmdbclone/) "hosted website")
 copy the link and paste it in the browser and you will be able to see the website i hosted.
