@@ -17,7 +17,6 @@ const Home = () => {
 
        <Row title="What's Popular" url={Requests.popularmovies}/> 
        <Row title="Top Rated" url={Requests.topratedmovies}/> 
-       <Row title="Now Playing" url={Requests.nowplayingmovies}/>
      
     </div>
   )

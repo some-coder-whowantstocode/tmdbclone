@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './season.css'
 import { NavLink } from 'react-router-dom';
+import Imag from './inf.png'
 
 const Season = ({mov,movi}) => {
     const[data,setdata] = useState([]);
@@ -10,10 +11,7 @@ const Season = ({mov,movi}) => {
     },[mov])
 
     useEffect(()=>{
-        // console.log(data.seasons && data.seasons[parseInt(data.seasons.length) -1] )
-        // console.log(data)
         setpos(data.seasons && data.number_of_seasons-1)
-        // console.log(data.seasons[data.seasons.length -1].poster_path)
     },[data])
 
   
@@ -27,7 +25,7 @@ const Season = ({mov,movi}) => {
     <div className="cs">
         <div className="leftcs">
             <NavLink to="/episode" state={[data?.id ?? ' ' , pos+1]} >
-            <img  className='image_season' src={"https://image.tmdb.org/t/p/w185"+ (data != undefined && data.seasons && data.seasons[pos]&& data.seasons[pos].poster_path)} alt="" />
+            <img  className='image_season' src={ (data != undefined && data.seasons && data.seasons[pos]&& data.seasons[pos].poster_path ? (data.seasons[pos].poster_path !== null ? "https://image.tmdb.org/t/p/w185"+ data.seasons[pos].poster_path : Imag) : Imag)} alt="" />
             </NavLink>
         </div>
         <div className="rightcs">

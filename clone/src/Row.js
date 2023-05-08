@@ -47,7 +47,7 @@ const Row = ({url,title}) => {
     <p className='name' key={result.id + "9"}>{result.name ? result.name : result.original_name}</p>
     </NavLink>
     <div className="progressbar" key={result.id + "10"}>
-    <Progress rating={result.vote_average}/>
+    <Progress rating={result.vote_average} />
     </div>
     <p className='date' key={result.id + "11"}>{result.release_date ? result.release_date : result.first_air_date}</p>
       </div>

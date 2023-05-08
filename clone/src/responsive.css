@@ -20,8 +20,12 @@
     .des{
         padding: 0;
     }
+    .des h2{
+        margin-top: 10px;
+        font-size: 30px;
+    }
     .search{
-        width: 98vw;
+        width: 95vw;
         font-size: 1rem;
     }
     .infimg {
@@ -49,9 +53,7 @@
     }
     .revbox{
         width: 96vw;
-    }
-    .headrev_review{
-        flex-direction: column;
+        box-shadow: 0px 0px 1px 1px rgba(135, 134, 134, 0.75)!important
     }
     .review{
         word-break: break-all;
@@ -119,6 +121,38 @@
       
         flex-direction: column;
     }
+    .spn{
+        font-size: 20px;
+    }
+    .castmem{
+        height: 169px;
+    border-radius: 10px;
+     width: unset;
+    }
+    .imgdetinfo{
+        height: 253px!important;
+    }
+    .original_nameinfo{
+        font-weight: 600!important;
+    }
+    .oribox{
+        align-items: center;
+    }
+    .fs h3{
+        font-size: 16px;
+    }
+    .wholereview_reviews{
+        margin-top: 5px;
+    }
+    .leftinfo h1{
+        font-size: 20px;
+    }
+    .leftinfo{
+        margin: 0 10px;
+    }
+    .obhead{
+        font-size: 20px;
+    }
    
 }
 
@@ -129,5 +163,15 @@
     .wholereview{
         width: 100vw;
     }
-
+    .reviewer{
+        height: 30px;
+        margin: 10px!important;
+    }
+   .top_review{
+    margin-top: 0!important;
+   }
+   .rowtitle{
+    margin-left: 4px;
+   }
+  
 }

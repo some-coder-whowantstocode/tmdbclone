@@ -9,6 +9,8 @@
         margin-right: 0px;
         display: flex;
         overflow: scroll;
+        flex-direction: row!important;
+        align-items: center;
     }
     .obhead{
         border-radius: 0!important;
@@ -35,18 +37,20 @@
     border-radius: 10px 10px 0 0;
     margin-top: 20px;
     margin-right: 10px;
-  
+    display: flex;  
+    flex-direction: column;
 }
 .obhead{
     height: fit-content;
     color: black;
-    font-weight: 800;
+    font-weight: 500;
     font-size: 2rem;
-    background-color: rgb(1,180,228);
+    /* background-color: rgb(1,180,228); */
     border-radius: 10px 10px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 5px;
 }
 .ob{
     height: 50px;

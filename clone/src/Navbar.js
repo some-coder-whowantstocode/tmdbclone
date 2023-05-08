@@ -50,7 +50,6 @@ const Navbar = () => {
       </div>
     <div className="leftnav">
     <label className='lab' htmlFor="see">
-    {/* <VscSearch/> */}
     </label>
     <NavLink className='list_s'  id="see" to="/searchpage"><span >search</span></NavLink>
 

@@ -263,7 +263,7 @@ const sho =(type)=>{
                 }
                    
         <div className="sd">
-        <h5>{nam(result) }</h5>
+        <h5 className='spn'>{nam(result) }</h5>
         <p className='chars'>{result.overview}</p>
         </div>
         
@@ -295,7 +295,7 @@ const sho =(type)=>{
                         }
                            
                 <div className="sd">
-                <h5>{nam(result) }</h5>
+                <h5 className='spn'>{nam(result) }</h5>
                 <p className='chars'>{result.overview}</p>
                 </div>
                 
@@ -328,7 +328,7 @@ const sho =(type)=>{
                                 }
                                    
                         <div className="sd">
-                        <h5>{nam(result) }</h5>
+                        <h5 className='spn'>{nam(result) }</h5>
                         <p className='chars'>{result.overview}</p>
                         </div>
                         
@@ -361,7 +361,7 @@ const sho =(type)=>{
             }
                
     <div className="sd">
-    <h5>{nam(result) }</h5>
+    <h5 className='spn'>{nam(result) }</h5>
     <p className='chars'>{result.overview}</p>
     </div>
     

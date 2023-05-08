@@ -34,9 +34,6 @@
     align-items: center;
     justify-content: center;
 }
-#see{
-    /* display: none; */
-}
 .lab{
     color: white;
 }
@@ -67,10 +64,11 @@
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    border: none!important;
 }
 .title{
     font-size: 2rem!important;
     font-family: 'Tilt Warp', cursive;
     color:rgb(4, 187, 223)!important;
-    
+    border: none!important;
 }

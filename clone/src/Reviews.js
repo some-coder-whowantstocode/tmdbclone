@@ -39,7 +39,7 @@ const Reviews = ({rev,type}) => {
           </div>
        </div> 
  
-  <p className="review">{movie.reviews &&(movie.reviews.results[0]&&movie.reviews.results[0].content.substr(0,270)+".....")}<a className="full_review" href={movie.reviews && (movie.reviews.results[0] &&  movie.reviews.results[0].url)}
+  <p className="review_t">{movie.reviews &&(movie.reviews.results[0]&&movie.reviews.results[0].content.substr(0,270)+".....")}<a className="full_review" href={movie.reviews && (movie.reviews.results[0] &&  movie.reviews.results[0].url)}
 >read the rest.</a></p>
 
   
