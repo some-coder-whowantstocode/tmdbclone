@@ -44,9 +44,6 @@ const Navbar = () => {
     <div  className={`navcontainer ${clas}`}>
       <div className="rightnav">
 <NavLink className='title list_n' to="/"><span >TMDB</span></NavLink>
-<div className="list">movies</div>
-<div className="list">TV shows</div>
-<div className="list">People</div>
       </div>
     <div className="leftnav">
     <label className='lab' htmlFor="see">
