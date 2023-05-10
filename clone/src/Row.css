@@ -4,7 +4,7 @@
     align-items: center;
     /* justify-content: center; */
     flex-direction: column;
-    
+    position: relative;
 }
 .titlecontainer{
     width: 85vw;
@@ -23,6 +23,7 @@
     overflow: scroll;
     line-height: none;
 
+    
 }
 .rowimg{
     border-radius: 10px;
@@ -34,7 +35,6 @@
     margin: 0rem 0.6rem;
     margin-bottom: 1rem;
     position: relative;
-   
 }
 .progressbar{
     position: absolute; 
@@ -51,4 +51,37 @@
     color: gray;
     font-weight: 200;
    
+}
+.rb{
+    position: absolute;
+}
+.left{
+    left: 185px;
+    top: 50%;
+    z-index: 1;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color:rgb(1 34 85);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: white;
+}
+.right{
+    right: 185px;
+    top: 50%;
+    z-index: 1;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color:rgb(1 34 85);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: white;
 }

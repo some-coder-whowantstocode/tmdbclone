@@ -5,7 +5,9 @@ import image from'./inf.png'
 import './Row.css'
 import Progress from './Progress'
 
+
 const Row = ({url,title}) => {
+
 
     const[movies,setmovies]=useState([]);
 
@@ -19,7 +21,12 @@ const Row = ({url,title}) => {
         getdata();
         
     },[url])
+    
+    const ref = useRef(null);
 
+    const scroll = (scrollOffset) => {
+      ref.current.scrollLeft += scrollOffset;
+    };
 
     const mov =(result)=>{
 
@@ -55,12 +62,14 @@ const Row = ({url,title}) => {
 
   return (
     <div className='rowcontainer'>
+        
     <div className="titlecontainer">
     <div className="rowtitle" ><h2 className="rowtitle">{title}</h2></div>
     </div>
     
-      <div className="rowbox"  >
-        
+      <div className="rowbox smooth-scroll" ref={ref} >
+      <button onClick={()=>scroll(500)} className="right rb">⇾</button>
+      <button onClick={()=>scroll(-500)} className="left rb">←</button>
         {movies.data&&movies.data.results.map((result)=>(
           result.media_type ? result.media_type=="movie" ? mov(result) : tv(result) : mov(result)
         ))}

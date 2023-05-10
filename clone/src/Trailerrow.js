@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useRef } from 'react'
 import './trailerrow.css'
 import ReactPlayer from 'react-player'
 import Void from './void.jpg'
@@ -102,6 +102,16 @@ const settle =(id)=>{
     setid(id)
 }
 
+
+
+const ref = useRef(null);
+
+const scroll = (scrollOffset) => {
+  ref.current.scrollLeft += scrollOffset;
+};
+
+
+
   return (
     <>
     <div className="trailrowbox">
@@ -122,7 +132,9 @@ const settle =(id)=>{
         }}>
        
 
-       <div className="shadowbox">
+       <div className="shadowbox" ref={ref}>
+       <button onClick={()=>scroll(500)} className="right rb">⇾</button>
+      <button onClick={()=>scroll(-500)} className="left rb">←</button>
 <h2 className='titl_tr' >{title}</h2>
        
     

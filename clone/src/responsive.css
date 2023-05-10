@@ -175,3 +175,8 @@
    }
   
 }
+@media (width <= 1000px) {
+    .rb{
+        display: none;
+    }
+}
